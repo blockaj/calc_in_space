@@ -3,6 +3,9 @@
 	background-size: cover;
 	min-height: 100%;
 }
+.nav {
+
+}
 .spacegray-box {
 	border-radius: 3px;
 	width: 50%;
@@ -22,6 +25,9 @@ p {
 	font-size: 1.3em;
 }
 .equation {
+	padding: 15px;
+	border-radius: 3px;
+	background-color: #F0F0F5;
 	font-family: serif;
 	font-style: oblique;
 	font-size: 1.3em;
@@ -31,14 +37,11 @@ p {
 	bottom: 0px;
 }
 a {
-	color: #FA7F0D;
+	-webkit-transtion: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 a:hover {
-	color: #FA7F0D;
-	text-decoration: none;
-	border-bottom: 2px dotted #FA7F0D;
-}
-a:visited {
-	color: #FA7F0D;
-	text-decoration: none;
+	font-style: oblique;
 }

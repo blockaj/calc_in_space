@@ -5,6 +5,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="main.css">
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -20,13 +21,15 @@
 			<div class="header row">
 				<div class="spacegray-box col-md-12">
 					<h1>Calculus in Space</h1>
-					<p>
-						We all know NASA. Well, due to lack of funding they've resorted to hiring 
-						high school students to solve some of their greatest space-related challenges. After a NASA official visited SLA, he quickly concluded that Aaron and Leo Levy were the smartest science boys on the planet. The NASA official recruited these two smarties to take their space program to the next level.
-					</p>
-					<p>
-						The exploits of Leo and Aaron have been recorded for your viewing and reading pleasure on this website. Scroll down to find out more about these legendary science boys. 
-					</p>
+					<ul class="nav">
+						<li><a href="#about">About</a></li>
+						<li><a href="#power_functions">Power Functions</a></li>
+						<li><a href="#exponents_and_logs">Exponential and Logarithmic Functions</a></li>
+						<li><a href="#products_and_quotients">Products and Quotients</a></li>
+						<li><a href="#compound_functions">Compound Functions</a></li>
+						<li><a href="#trig_functions">Trigonometric Functions</a></li>
+					</ul>
+					
 					<div class="footer">To turn off music <a href="#" onclick="return musicOff();">click here.</a></div>
 					<script type="text/javascript">
 					function musicOff() {
@@ -36,7 +39,19 @@
 					</script>
 				</div>
 			</div>
-			<div class="row">
+			<div id="about" class="row">
+				<div class="col-md-6">
+					<h2>About</h2>
+					<p>
+						We all know NASA. Well, due to lack of funding they've resorted to hiring 
+						high school students to solve some of their greatest space-related challenges. After a NASA official visited SLA, he quickly concluded that Aaron and Leo Levy were the smartest science boys on the planet. The NASA official recruited these two smarties to take their space program to the next level.
+					</p>
+					<p>
+						The exploits of Leo and Aaron have been recorded for your viewing and reading pleasure on this website. Scroll down to find out more about these legendary science boys. 
+					</p>
+				</div>
+			</div>
+			<div id="#exponents_and_logs" class="row">
 				<div class="col-md-12">
 					<h2>Jetpacks and Air Pressure</h2>
 					<div class="row">
@@ -95,19 +110,17 @@
 					<div class="row">
 						<div class="col-md-6">
 							<p>
-								When their funding was cut, NASA was midway through a project to send a satellite, The Blockey Satellite, into space. The distance from the Earth to this satellite has already been determined. However, for this satellite, the velocity must be pretty consistent. If the satellite moves closer or farther away from Earth, the velocity will be affected.
+								When their funding was cut, NASA was midway through a project to send a satellite, The Blockey Satellite, into space. The distance from the Earth to this satellite has already been determined. However, for this satellite, the speed must be pretty consistent. If the satellite moves closer or farther away from Earth, the speed will be affected.
 							</p>
 							<p>
-								Therefore, the science boys will find the derivative of the velocity with respect to distance from the Earth at the distance from the Earth the satellite will be and then determine if the rate of change is too great. If so, the satellites distance from Earth will need to be adjusted. 
+								Therefore, the science boys will find the derivative of the speed with respect to distance from the Earth at the distance from the Earth the satellite will be and then determine if the rate of change is too great. If so, the satellites distance from Earth will need to be adjusted. 
 							</p>
 						</div>
 						<div class="col-md-6">
 							<p class="equation">
-								<ul class="equation">
-									<li>Velocity of a satellite: $\sqrt{\frac{G \cdot M_{central}}{R}}$</li>
-									<li>G = $6.67408 \cdot 10^{-11} \frac{m^3}{kg \cdot s^2}$ (gravitational constant)</li>
-									<li>$M_{central}$ = $5.972 \cdot 10^{24}$ (mass of Earth) <br/> R = radius from center of Earth to satellite</li>
-								</ul>
+									Speed of a satellite = $\sqrt{\frac{G \cdot M_{central}}{R}}$,
+									G = $6.67408 \cdot 10^{-11} \frac{m^3}{kg \cdot s^2}$ (gravitational constant), 
+									$M_{central}$ = $5.972 \cdot 10^{24}$ (mass of Earth), R = radius from center of Earth to satellite
 								$$
 									G \cdot M_{central}=3.9857606 \cdot 10^{14} \\
 									v = \sqrt{\frac{3.9857606 \cdot 10^{14}}{R}} = (\frac{3.9857606 \cdot 10^{14}}{R})^{\frac{1}{2}}
@@ -128,11 +141,7 @@
 								\frac{dv}{dR} & = \frac{1}{2}(\frac{3.9857606 \cdot 10^{14}}{R})^{-\frac{1}{2}} \cdot \frac{3.9857606 \cdot 10^{14}}{R^2}
 								\end{split}
 								\end{equation}
-								$$
-								<p class="equation">$
-								$</p>
-
-								<p class="equation">R = radius of Earth + distance from Earth to satellite = 6371 + 900 = 7271</p>
+								R = radius of Earth + distance from Earth to satellite = 6371 + 900 = 7271 <Br />
 								$\frac{dv}{dR}|_{R=42371}=16.10032\frac{m/s}{km}$
 							</p>
 						</div>
