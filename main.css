@@ -1,0 +1,44 @@
+.header {
+	background: url('space-09.jpg');
+	background-size: cover;
+	min-height: 100%;
+}
+.spacegray-box {
+	border-radius: 3px;
+	width: 70%;
+	height: 70%;
+	left: 15px;
+	margin-top: 10%;
+	position: relative;
+	background: linear-gradient(rgba(79, 91, 102, 0.9), rgba(79, 91, 102, 0.9));
+	color: #fff;
+}
+h1, h2 {
+	font-family: "Maven Pro", sans-serif;
+	font-weight: 700;
+}
+p {
+	font-family: "Roboto Slab";
+	font-size: 1.3em;
+}
+.equation {
+	font-family: serif;
+	font-style: oblique;
+	font-size: 1.3em;
+}
+.footer {
+	position: absolute;
+	bottom: 0px;
+}
+a {
+	color: #FA7F0D;
+}
+a:hover {
+	color: #FA7F0D;
+	text-decoration: none;
+	border-bottom: 2px dotted #FA7F0D;
+}
+a:visited {
+	color: #FA7F0D;
+	text-decoration: none;
+}

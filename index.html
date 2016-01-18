@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<title>Caluclus in Space</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="main.css">
+		<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+		<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+	</head>
+	<body>
+		<!--<audio id="background-music" autoplay repeat>
+			<source src="background.mp3" type="audio/mpeg">
+		</audio>-->
+		<div class="container-fluid">
+			<div class="header row">
+				<div class="spacegray-box col-md-12">
+					<h1>Calculus in Space</h1>
+					<p>
+						We all know NASA. Well, due to lack of funding they've resorted to hiring 
+						high school students to solve some of their greatest space-related challenges. After a NASA official visited SLA, he quickly concluded that Aaron and Leo Levy were the smartest science boys on the planet. The NASA official recruited these two smarties to take their space program to the next level.
+					</p>
+					<p>
+						The exploits of Leo and Aaron have been recorded for your viewing and reading pleasure on this website. Scroll down to find out more about these legendary science boys. 
+					</p>
+					<div class="footer">To turn off music <a href="#" onclick="return musicOff();">click here.</a></div>
+					<script type="text/javascript">
+					function musicOff() {
+						var audio = document.getElementById('background-music');
+						audio.muted = true;
+					}
+					</script>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Jetpacks and Air Pressure</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								Timmy is in a jet pack. He has an equation to calculate the atmospheric pressure up to 80 km off earth. Once Timmy passes the 80km mark, he has no way of determining the pressure around him. The science boys find the derivative of his equation and plug in 80 km to <em>approximate</em> what the pressure will be once he leaves 80 km.
+							</p>
+							<p>
+								Using calculus, the science boys found the rate at which pressure was decreasing <em>right</em> before Timmy left the 80km mark. They used this to extrapolate what the atmospheric pressure would be just after Timmy left the atmosphere. 
+							</p>
+						</div>
+						<div class="col-md-6">
+							<p class="equation">
+								P = pressure, h = height <br/>
+								$$
+									P = 1035(\frac{1}{2})^{\frac{h}{5.8}} \\
+									\frac{dP}{dh} = 1035 \cdot ln(\frac{1}{2})\cdot \frac{1}{2}^{\frac{h}{5.8}} \\ 
+									\frac{dP}{dh}|_{h=80}=-0.05053915072 \frac{\frac{g}{cm^2}}{km}
+								$$
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-7">
+					<h2>Power Functions</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, cumque voluptas. Nesciunt nisi omnis cupiditate iusto ducimus obcaecati fugiat a aliquam, harum sunt eos ipsa, velit. Nihil nulla animi dolorum.
+					</p>
+				</div>
+				<div class="col-md-5">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>There's A Meteor That Will Kill Us All</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique voluptatem eveniet, repellendus obcaecati incidunt quas aut beatae minima amet. Doloribus dolorum repellat incidunt quod architecto nihil sequi expedita ipsa libero!
+							</p>
+						</div>
+						<div class="col-md-6">
+							<p class="equation">
+								
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<h2>The Science Boys Send A Satellite Into Space</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<p>
+								When their funding was cut, NASA was midway through a project to send a satellite, The Blockey Satellite, into space. The distance from the Earth to this satellite has already been determined. However, for this satellite, the velocity must be pretty consistent. If the satellite moves closer or farther away from Earth, the velocity will be affected.
+							</p>
+							<p>
+								Therefore, the science boys will find the derivative of the velocity with respect to distance from the Earth at the distance from the Earth the satellite will be and then determine if the rate of change is too great. If so, the satellites distance from Earth will need to be adjusted. 
+							</p>
+						</div>
+						<div class="col-md-6">
+							<p class="equation">
+								<ul class="equation">
+									<li>Velocity of a satellite: $\sqrt{\frac{G \cdot M_{central}}{R}}$</li>
+									<li>G = $6.67408 \cdot 10^{-11} \frac{m^3}{kg \cdot s^2}$ (gravitational constant)</li>
+									<li>$M_{central}$ = $5.972 \cdot 10^{24}$ (mass of Earth) <br/> R = radius from center of Earth to satellite</li>
+								</ul>
+								<p class="equation">$G \cdot M_{central}=3.9857606 \cdot 10^{14}$</p>
+								<p class="equation">$v = \sqrt{\frac{3.9857606 \cdot 10^{14}}{R}} = (\frac{3.9857606 \cdot 10^{14}}{R})^{\frac{1}{2}}$</p>
+								$$
+								\begin{equation}
+								\begin{split}
+									& f(x) = x^{\frac{1}{2}} \quad & g(R) = \frac{3.9857606 \cdot 10^{14}}{R} \\ 
+								
+								& f^\prime(x) = \frac{1}{2}x^{-\frac{1}{2}} \quad & g^\prime(R) =  \frac{3.9857606 \cdot 10^{14}}{R^2} \\ 
+								\end{split}
+								\end{equation} 
+								$$
+
+								$$
+								\begin{equation}
+								\begin{split}
+								\frac{dv}{dR} & = f^\prime(g(R)) \cdot g^\prime(R) \\ 
+								\frac{dv}{dR} & = \frac{1}{2}(\frac{3.9857606 \cdot 10^{14}}{R})^{-\frac{1}{2}} \cdot \frac{3.9857606 \cdot 10^{14}}{R^2}
+								\end{split}
+								\end{equation}
+								$$
+								<p class="equation">$
+								$</p>
+
+								<p class="equation">R = radius of Earth + distance from Earth to satellite = 6371 + 900 = 7271</p>
+								$\frac{dv}{dR}|_{R=42371}=16.10032\frac{m/s}{km}$
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
