@@ -25,6 +25,10 @@ h1, h2 {
 p {
 	font-family: "Roboto Slab";
 	font-size: 1.3em;
+	text-align: justify;
+}
+.col-md-7 {
+	margin: 0 auto;
 }
 .equation {
 	padding: 15px;
@@ -63,6 +67,7 @@ a {
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+
 .footer-container {
 	height: 50px;
 	position: relative;
@@ -73,6 +78,9 @@ a {
 	margin-right: auto;
 	width: 50%;
 }
+.homelink {
+	text-align: center;
+}
 .left, .right {
 	top: 5px;
 	color: #000000;
@@ -82,4 +90,16 @@ a {
 }
 .right {
 	float: right;
+}
+.bib {
+	list-style-type: none;
+	font-family: "Roboto Slab";
+	font-size: 1.3em;
+	padding: 0;
+}
+.bib-link {
+	color: #000000;
+}
+.bib li {
+	padding-bottom: 10px;
 }

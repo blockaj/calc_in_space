@@ -14,21 +14,23 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<h1>Compound Functions</h1>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>Compound Functions</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
 					<p>
 						When their funding was cut, NASA was midway through a project to send a satellite, The Blockey Satellite, into space. The distance from the Earth to this satellite has already been determined. However, for this satellite, the speed must be pretty consistent. If the satellite moves closer or farther away from Earth, the speed will be affected. Therefore, the science boys will find the derivative of the speed with respect to distance from the Earth at the distance from the Earth the satellite will be and then determine if the rate of change is too great. If so, the satellites distance from Earth will need to be adjusted. 
 					</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
 					<p>
-						To find the speed of the satellite with respect to the radius from the center of the Earth to the satellite, the function is $ v= \sqrt{ \frac{G \cdot M_{central}}{R}}$ where $v$ is the speed, $G$ is the gravitational constant, $M_{central}$ is the mass of the Earth, and $R$ is the radius from the center of the Earth to the satellite.  
+						To find the speed of the satellite with respect to the radius from the center of the Earth to the satellite, the function is $ v= \sqrt{ \frac{G \cdot M_{central}}{R}}$ where $v$ is the speed, $G$ is the gravitational constant, $M_{central}$ is the mass of the Earth, and $R$ is the radius from the center of the Earth to the satellite. (Mathematics of Satellite Motion)  
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
 						G = 6.67408 \cdot 10^{-11} \\
@@ -38,19 +40,17 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
 					<p>
-						We can multiply $G$ by $M_{central}$ to make our work easier for us. Since this is a compound function, we should identify an inside function and an outside function. We will call these functions $f(x)$ and $g(R)$. To find the derivative of a compound function we use the chain rule: $ f^\prime(g(R)) \cdot g^\prime(R) $
+						We can multiply $G$ by $M_{central}$ to make our work easier for us. Since this is a compound function, we should identify an inside function and an outside function. We will call these functions $f(x)$ and $g(R)$. To find the derivative of a compound function we use the chain rule (Chain Rule): $ f^\prime(g(R)) \cdot g^\prime(R) $
 					</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
 					<p>
 						We determine our inside and outside functions. 
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
 						f(x) = x^{\frac{1}{2}} \\
@@ -60,37 +60,65 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
 					<p>
-						Now using the chain rule described above, we will find our derivative. Let's start with the inside function. Since the input of $g(R)$ is in the denominator, we will use the reciprocal which says for a function $f(x) = \frac{1}{x}$, the derivative is $f^\prime(x) = \frac{1}{x^2}$.
+						Now using the chain rule described above, we will find our derivative. Let's start with the inside function. Since the input of $g(R)$ is in the denominator, we will use the reciprocal which says for a function $f(x) = \frac{1}{x}$, the derivative is $f^\prime(x) = \frac{1}{x^2}$. 
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						\frac{3.985760576 \cdot 10^14}{R^2}
+						- \frac{3.985760576 \cdot 10^{14}}{R^2}
 						$$
 					</p>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
 					<p>
 						Now that we've found the derivative of the inside function we can find the derivative of the oustide function as well. Since the square root of x is the same as raising x to the one half, we can use the power rule to find the derivative of the outside. 
 					</p>
-				</div>
-				<div class="col-dm-5">
 					<p class="equation">
 						$$
-						\frac{1}{2} (\frac{3.985760576 \cdot 10^{14}}{R})^{\frac{1}{2}}
+						\frac{1}{2} (\frac{3.985760576 \cdot 10^{14}}{R})^{- \frac{1}{2}}
 						$$
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>
+						We've found the derivative of both the inside and outside functions so now we multiply them. 
+					</p>
+					<p class="equation">
+						$$
+						\frac{dv}{dR} = - \frac{1}{2} (\frac{3.985760576 \cdot 10^{14}}{R})^{- \frac{1}{2}} \cdot (\frac{3.985760576 \cdot 10^{14}}{R^2})
+						$$
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>
+						Now we can plug in the distance the satellite will be from the Earth into our derivative function in order to see if the change in speed with respect to distance from Earth is too great. It's important to note that in order to get an accurate output from out function, we must input the distance of our satellite from the Earth plus the radius of the Earth. 
+					</p>
+					<p class="equation">
+						$$
+						R = 900km (distance \quad of \quad satellite \quad from \quad Earth) + 6371km (radius \quad of \quad Earth) \\
+						\frac{dv}{dR}|_{R=7271km} = -16.10032 \frac{m/s}{km}
+						$$
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>
+						That number seems big but when we consider how fast the satellite is moving, it's fairly negligible. 
 					</p>
 				</div>
 			</div>
 		</div>
 		<div class="footer-container">
 			<div class="footer">
-				<a class="left" href="#">Products and Quotients</a><a class="right" href="#">Trigonometric Functions</a>
+				<a class="left" href="product_functions.html">Products</a><a class="right" href="#">Trigonometric Functions</a>
 			</div>
 		</div>
 	</body>

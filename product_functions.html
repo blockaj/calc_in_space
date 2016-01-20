@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<title>Product Functions</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+		<script type="text/x-mathjax-config">
+  		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>Product Functions</h1> <a class="right" href="index.html">Home</a>
+					<p>
+						A meteor with a cross-sectional area of $40m^2$ is hurtling towards Earth, and NASA has called on the Science Boys to figure out how much force the Earth's atmosphere is applying to the meteor at the moment of entry. The boys know that $F=M^\prime(t)$ , where F is force, M is momentum and t is time. They also know that $M=m \cdot V$, where m stands for mass and V stands for velocity. 
+
+						The equation for a meteor's mass with respect to time is given as:
+					</p>
+					<p class="equation">
+						$$
+						m(t)=\frac{100^3CAD}{2Q}t^{-3}, 
+						$$
+					</p>
+					<p>
+						where C represents the transfer coefficient, A stands for cross-sectional area, D stands for density and Q stands for the effective heat of ablation (Romig 8). The meteor is made out of an element with the density of iron, $8g/cm^3$, and the effective heat ablation of teflon, $1332  btu/lb$  (Howell 3), and that the heat transfer coefficient of the atmosphere is $100 W/m2K$ (www.engineersedge.com). This means that the meteor's mass with respect to time is equal to
+					</p>
+					<p class="equation">
+						$$
+						\frac{1003 \cdot 100 \cdot 40 \cdot 8}{2 \cdot 2.936}t^{-3} or 12,010,000t^{-3}
+						$$
+					</p>
+					<p>The equation for meteor's velocity with respect to time is given as$\frac{100}{t}$.</p>
+					<p>
+						To find $M^\prime(t)$, we can use the product rule, which states that
+					</p>
+					<p class="equation">
+						$$
+						\frac{d}{dx}[f(x)g(x)]=f(x)g^\prime(x)+f^\prime(x)g(x)
+						$$
+					</p>
+					<p>
+						For us, this translates into 
+						
+					</p>
+					<p class="equation">
+						$$
+						\frac{d}{dt}[m(t)v(t)]=m(t)v^\prime(t)+m^\prime(t)v(t)
+						$$
+					</p>
+					<p>
+						which means we'll need to find $m^\prime(t)$ and $v^\prime(t)$.
+					</p>
+					<p>
+						To find $m^\prime(t)$, we can employ the power rule, which states that
+					</p>
+					<p class="equation">
+						$$
+						\frac{d}{dx}[x^n]=nx^{n-1}
+						$$ 
+					</p>
+					<p>
+						In this case, this translates into
+					</p>
+					<p class="equation">
+						$$
+						\begin{equation}
+						\begin{split}
+						\frac{d}{dt}[12,010,000t^{-3}] &= -3(12,010,000)t^{-3-1} \\
+						&= -36030000t^{-4}
+						\end{split}
+						\end{equation}
+						$$
+					</p>
+					<p>
+						To find $v^\prime(t)$, we can employ the inverse rule, which states that
+					</p>
+					<p class="equation">
+						$$
+						\frac{d}{dx}(\frac{1}{g(x)})=-\frac{1}{[g(x)]^2}
+						$$
+					</p>  
+					<p>
+						We'll need derivative of $t$, which is 1. This means that $\frac{d}{dt}(\frac{100}{t})=-\frac{100}{t^2}$. Now we can plug these derivatives into our product rule equation! Now let's plug in:
+					</p>
+					<p class="equation">
+						$$
+						\begin{equation}
+						\begin{split}
+						\frac{d}{dt}[(12,010,000t-3)(100t)] &=(12,010,000t^{-3})(\frac{-100}{t^2})+(-36030000t^{-4})(\frac{100}{t}) \\
+						&= -\frac{4,804,000,000}{t^5}
+						\end{split}
+						\end{equation}
+						$$
+					</p>
+					<p>
+						This means that the force being exerted on the meteor is equal $-\frac{4,804,000,000}{t^5}$ newtons. 
+
+					</p>
+				</div>
+			</div>			
+		</div>
+		<div class="footer-container">
+			<div class="footer">
+				<a class="left" href="exponential_func.html">Exponential Functions</a><a class="right" href="compound_functions.html">Compound Functions</a>
+			</div>
+		</div>
+	</body>
+</html>

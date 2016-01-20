@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Exponential Functions</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300' rel='stylesheet' type='text/css'>
+		<script type="text/x-mathjax-config">
+  		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>Exponential Functions</h1> <a class="right" href="index.html">Home</a>
+					<p>
+						Timmy is in a jet pack. He has an equation to calculate the atmospheric pressure up to 80 km off earth. Once Timmy passes the 80km mark, he has no way of determining the pressure around him. The science boys find the derivative of his equation and plug in 80 km to <em>approximate</em> what the pressure will be once he leaves 80 km. Using calculus, the science boys found the rate at which pressure was decreasing <em>right</em> before Timmy left the 80km mark. They used this to extrapolate what the atmospheric pressure would be just after Timmy left the atmosphere. (NASA Space Mathematics)
+					</p>
+					<p>
+						To find the atmospheric anywhere below 80km we can use this equation:
+					</p>
+					<p class="equation">
+						$$
+						P = 1035(\frac{1}{2})^\frac{h}{5.8}
+						$$
+					</p>
+					<p>
+						To find the rate at which pressure is changing with respect to height we'll need to derivative rules: the chain rule, because the exponent in this function is also a function; and the exponent rule because there is a variable in the exponent. The rules are as follows:
+					</p>
+					<p class="equation">
+					Compound function rule or chain rule
+						$$
+						f^\prime(g(x)) = f^\prime(g(x)) \cdot g^\prime(x)
+						$$
+					Exponential rule
+						$$
+						f(x) = ab^x \\
+						f^\prime(x) = a \cdot ln(b)b^x
+						$$
+					</p>
+					<p>
+						In this equation, the "inside function" is $\frac{h}{5.8}$ so the derivative of that is simply $\frac{1}{5.8}$. Later, we will multiply this by the derivative of the outside function.
+					</p>
+					<p>
+						Now, to find the derivative of the "outside function", we use the exponent rule. 
+					</p>
+					<p class="equation">
+						$$
+						1035 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}}
+						$$
+					</p>
+					<p>
+						After multiplying the derivative of the inside and outside functions, we get our whole derivative function:
+					</p>
+					<p class="equation">
+						$$
+						\frac{dP}{dh} = 178.448 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}}
+						$$
+					</p>
+					<p>
+						If we plug in 80km, the point right before our function stops being accurate:
+					</p>
+					<p class="equation">
+						$$
+						\frac{dP}{dh}|_{h=80} = -0.00871364073 \frac{g/cm^2}{km}
+						$$
+					</p>
+					<p>
+						Now Timmy can approximate what the atmospheric pressure will be like just above the 80km limit. 
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-container">
+			<div class="footer">
+				<a class="left" href="power_functions.html">Power Functions</a><a class="right" href="product_functions.html">Products</a>
+			</div>
+		</div>
+	</body>
+</html>

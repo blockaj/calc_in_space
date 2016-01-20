@@ -14,88 +14,63 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<h1>Power Functions</h1>
+			
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
+					<h1>Power Functions</h1>
 					<p>
-						Timmy is in a jet pack. He has an equation to calculate the atmospheric pressure up to 80 km off earth. Once Timmy passes the 80km mark, he has no way of determining the pressure around him. The science boys find the derivative of his equation and plug in 80 km to <em><b>approximate</b></em> what the pressure will be once he leaves 80 km. Using calculus, the science boys found the rate at which pressure was decreasing <em>right</em> before Timmy left the 80km mark. They used this to extrapolate what the atmospheric pressure would be just after Timmy left the atmosphere. 
+						The Blockey Satellite was hit by an asteroid and sent hurtling towards Earth. When the asteroid hit the satellite, it caused the satellite to go 30 m/s towards Earth. We know the satellite orbited Earth at 900km above the surface. NASA has asked the Science Boys to  work out the satellite’s speed just before it hit the ground. 
 					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
 					<p>
-						First the science boys got an equation from NASA to find the atmospheric pressure with respect to height below 80km above the Earth. 
+						NASA told the boys that the displacement of the satellite could be measured by the equation 
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						P = 1035(\frac{1}{2})^{\frac{h}{5.8}}
+							d=4.9t^2+30t+900000
 						$$
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
+					</p> 
 					<p>
-						Then the boys noticed that this is a compound function. They'll find the derivative of the oustide function first which is an exponential function. They used the exponent rule: multiply the exponential equation by the natural log of the base. 
+						NASA has also told the boys that the satellite will take 78.246079644 seconds to hit earth. The boys know that velocity is the derivative of displacement with respect to time. To find the derivative of the equation above, the boys must use the power rule.
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						1035 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}}
+						\frac{d}{dx}(ax^n)=a \cdot xn^{n-1}
 						$$
 					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
 					<p>
-						After addressing the exponent, we must address the inside function. We multiply our new function by the derivative of the inside function. 
+						The boys will use the power rule on each term in the equation. 
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						1035 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}} \cdot \frac{1}{5.8}
+						\begin{equation}
+						\begin{split}
+						\frac{d}{dt}(4.9t^2+30t+900000) &= 2 \cdot 4.9t^{2-1} + 30t^{1-1} \\
+						&=9.8t + 30
+						\end{split}
+						\end{equation}
 						$$
 					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
 					<p>
-						Our final function is $ \frac{dP}{dh} = 178.448 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}}$
+						Now that we have our equation for finding velocity at any given point, we can plug in the amount of time it takes for the satellite to fall to find the velocity the instant before the satellite smashes into Earth. 
 					</p>
-				</div>
-				<div class="col-md-5"></div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
-					<p>
-						Now, we'll plug in 80km (the highest value at which our function will be accurate) so we can approximate the pressure right above 80km. Our functions takes input in centimeters so we must multiply 80 by 100,000.
-					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						\frac{dP}{dh}|_{h=80} = -.008713616 \frac{g}{cm^3}
+						\begin{equation}
+						\begin{split}
+						&v=9.8t+30 \\ 
+						&v=9.8(78.246079644)+30 \\
+						&v=796.811580511 \frac{m}{s}
+						\end{split}
+						\end{equation}
 						$$
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
-					<p>
-						Now with this we can approximate the pressure at 80.002 km
 					</p>
 				</div>
 			</div>
 		</div>
-		<div class="footer">
-			<a href="#">Home</a><a href="#">Power Functions</a>
+		<div class="footer-container">
+			<div class="footer">
+			<a class="left" href="about.html">About</a><a class="right" href="exponential_func.html">Exponential Functions</a>
+			</div>
 		</div>
 	</body>
 </html>
