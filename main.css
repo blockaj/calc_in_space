@@ -83,6 +83,7 @@ a {
 }
 .left, .right {
 	top: 5px;
+	font-size: 1.3em;
 	color: #000000;
 }
 .left {

@@ -14,84 +14,58 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<h1>Trigonometric Functions</h1>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-8 col-md-offset-2">
+				<h1>Trigonometric Functions</h1>
 					<p>
-						Timmy is in a jet pack. He has an equation to calculate the atmospheric pressure up to 80 km off earth. Once Timmy passes the 80km mark, he has no way of determining the pressure around him. The science boys find the derivative of his equation and plug in 80 km to <em><b>approximate</b></em> what the pressure will be once he leaves 80 km. Using calculus, the science boys found the rate at which pressure was decreasing <em>right</em> before Timmy left the 80km mark. They used this to extrapolate what the atmospheric pressure would be just after Timmy left the atmosphere. 
+						The science boys love to spot satellites through their little telescope, on their roof in Philadelphia, Pennsylvania. Because of their involvement in the project, they’re especially excited to see the Blockey Satellite as it passes over the city. The distance of the satellite from an axis through the Earth that intercepts Kennedy Space Center is given by the equation 
 					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
-					<p>
-						First the science boys got an equation from NASA to find the atmospheric pressure with respect to height below 80km above the Earth. 
-					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						P = 1035(\frac{1}{2})^{\frac{h}{5.8}}
+							f(x)=r(sin(\theta))
 						$$
-					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
+					</p> 
 					<p>
-						Then the boys noticed that this is a compound function. They'll find the derivative of the oustide function first which is an exponential function. They used the exponent rule: multiply the exponential equation by the natural log of the base. 
+					where $r$ represents the distance from the core of the Earth to the satellite, and $\theta$ represents the angle from the Kennedy Axis to the core of the Earth to the satellite. The average distance from the center of the Earth to the surface is 6,371 km (Sharp), and the satellite orbits 900 km above the surface. When the satellite is over Philadelphia, is equal to 11.4259. The science boys want to know, at that moment, how fast the satellite is moving away from the axis. 
 					</p>
-				</div>
-				<div class="col-md-5">
+					<p>
+						To figure this out, we can use the trig function derivative rules, which states that
+					</p>
 					<p class="equation">
 						$$
-						1035 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}}
+						f^\prime(sin(\theta)) = cos\theta
 						$$
 					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
 					<p>
-						After addressing the exponent, we must address the inside function. We multiply our new function by the derivative of the inside function. 
+						This means that
 					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						1035 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}} \cdot \frac{1}{5.8}
+						\frac{d}{d\theta}(7271(sin\theta)) = 7271cos\theta
 						$$
 					</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
 					<p>
-						Our final function is $ \frac{dP}{dh} = 178.448 \cdot ln(\frac{1}{2}) \frac{1}{2}^{\frac{h}{5.8}}$
+						Now we can plug in for $\theta$, giving us
 					</p>
-				</div>
-				<div class="col-md-5"></div>
-			</div>
-			<div class="row">
-				<div class="col-md-7">
-					<p>
-						Now, we'll plug in 80km (the highest value at which our function will be accurate) so we can approximate the pressure right above 80km. Our functions takes input in centimeters so we must multiply 80 by 100,000.
-					</p>
-				</div>
-				<div class="col-md-5">
 					<p class="equation">
 						$$
-						\frac{dP}{dh}|_{h=80} = -.008713616 \frac{g}{cm^3}
+						\begin{equation}
+						\begin{split}
+						\frac{d}{d\theta}|_{\theta=11.4259}&=7271(cos(11.4259)) \\
+						&=3033.22
+						\end{split}
+						\end{equation}
 						$$
+					</p>
+					<p>
+						This means that, as it passes over Philadelphia, the satellite is moving away from the axis at a rate of $3033.22 \frac{km}{radian}$. 
 					</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-7">
-					<p>
-						Now with this we can approximate the pressure at 80.002 km
-					</p>
-				</div>
+		</div>
+		<div class="footer-container">
+			<div class="footer">
+				<a class="left" href="compound_functions.html">Compound Functions</a><a class="right" href="bib.html">Bibliography</a>
 			</div>
 		</div>
 	</body>
